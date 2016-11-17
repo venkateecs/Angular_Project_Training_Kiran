@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+<script src="bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app="">
+
+<input type="tel" ng-model="tel_phone" />
+    <br /> <span style="color:red">(Example for one way binding)</span> 
+    <h1 style="color:red" ng-bind="::tel_phone"></h1>
+
+
+      <br /> <span style="color:red">(Example for Two way binding)</span> 
+    <h1 style="color:red" ng-bind="tel_phone"></h1>
+</body>
+</html>
+
+
