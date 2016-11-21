@@ -1,19 +1,28 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="BlogFace">
 <head>
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.js">
+    </script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
 
-<script src="bower_components/angular/angular.min.js"></script>
 </head>
-<body ng-app="">
 
-<input type="tel" ng-model="tel_phone" />
-    <br /> <span style="color:red">(Example for one way binding)</span> 
-    <h1 style="color:red" ng-bind="::tel_phone"></h1>
+<body>
 
+ <div class="container">
+        <div ng-include="'app/header/Header.html'"></div>
+        
+    </div>
+    
+   <!--header-->
+    <script src="app/header/header.js"></script>
+    <script src="app/header/headerctrl.js"></script>
+    
+    <script src="app/app.js"></script>    
 
-      <br /> <span style="color:red">(Example for Two way binding)</span> 
-    <h1 style="color:red" ng-bind="tel_phone"></h1>
 </body>
 </html>
 
