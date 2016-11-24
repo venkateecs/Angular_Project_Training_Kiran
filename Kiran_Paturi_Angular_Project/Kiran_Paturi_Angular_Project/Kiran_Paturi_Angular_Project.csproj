@@ -131,9 +131,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\blog\blog.html" />
+    <Content Include="app\blog\blog.js" />
+    <Content Include="app\blog\blogCtrl.js" />
     <Content Include="app\header\Header.html" />
     <Content Include="app\header\header.js" />
     <Content Include="app\header\headerctrl.js" />
+    <Content Include="app\home\home.html" />
+    <Content Include="app\login\login.html" />
+    <Content Include="app\register\register.html" />
+    <Content Include="app\register\register.js" />
+    <Content Include="app\register\registerCtrl.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -235,9 +243,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\login\" />
     <Folder Include="app\post\" />
-    <Folder Include="app\register\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

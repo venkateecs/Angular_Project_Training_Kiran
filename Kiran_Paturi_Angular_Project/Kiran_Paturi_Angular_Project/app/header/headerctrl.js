@@ -7,7 +7,7 @@
           callbackFunction
         */
         function headerCtrlFn($scope) {
-            $scope.brandName = "Blogger.io";
+            $scope.brandName = "Blogger.io Venkat Ramana";
             $scope.navItems = ["Home", "Blog", "Register", "Login"];
         }
 
@@ -15,4 +15,5 @@
         .controller("headerCtrl", ["$scope", headerCtrlFn]);
 
 
-    })();
+})();
+
