@@ -3,22 +3,31 @@
 
 function () {
 
-    function registerCtrl() {
-        this.countries = [
-            { "name": "India", "code": "IN" },
-            {"name":"United State of America","code":"US"}
-        ];
+    function registerCtrl(registerSvc, lookupSvc) {
+        var vm = this;
 
-        this.userDetails = {};
-        this.register = function () {
-            console.log(this.userDetails);
+        vm.userDetails = {};
+
+        vm.register = function () {
+            registerSvc.registerUser(vm.userDetails);
         }
+
+        lookupSvc.getCountries()
+        .then(function (response) {
+            vm.countries = response.data.countries;
+        })
+        .catch(function (response) {
+            console.log(response);
+        })
+        .finally(function (response) {
+            console.log(response);
+        })
 
 
     }
 
     angular.module("register")
-    .controller("registerCtrl", [registerCtrl])
+    .controller("registerCtrl", ["registerSvc", "lookupSvc", registerCtrl])
 
 }
     

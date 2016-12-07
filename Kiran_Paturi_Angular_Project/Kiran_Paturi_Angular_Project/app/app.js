@@ -2,7 +2,7 @@
 (
    function () {
        /*Module Creation*/
-       angular.module("BlogFace", ["header", "ui.router", "blog", "register"]);
+       angular.module("BlogFace", ["header", "ui.router", "product", "register", "login", "lookup", 'ngTouch', 'ui.grid', "components", "user"]);
 
        /*Module Consumption*/
 
@@ -15,11 +15,11 @@
             3.invoking the state
            */
 
-           var blogObj = {
-               templateUrl: "app/blog/blog.html",
-               controller: "blogCtrl",
-               name: "Blog"
-           }
+           var productObj = {
+               templateUrl: "app/products/product.html",
+               controller: "productCtrl",
+               name: "Product"
+           };
 
            var registerObj = {
                templateUrl:"app/register/register.html",
@@ -30,7 +30,9 @@
 
            var loginObj = {
                templateUrl: "app/login/login.html",
-               name: "Login"
+               name: "Login",
+               controller: "loginCtrl",
+               controllerAs:"lc"
            }
 
            var homeObj = {
@@ -38,10 +40,17 @@
                name: "Home"
            };
 
-           $stateProvider.state("Blog", blogObj);
+           var userObj = {
+               templateUrl: "app/users/user.html",
+               name: "Users",
+               controller: "userCtrl"
+           };
+
+           $stateProvider.state("Product", productObj);
            $stateProvider.state("Register", registerObj);
            $stateProvider.state("Login", loginObj);
            $stateProvider.state("Home", homeObj);
+           $stateProvider.state("Users", userObj);
 
            console.log("Blog Face Module");
 

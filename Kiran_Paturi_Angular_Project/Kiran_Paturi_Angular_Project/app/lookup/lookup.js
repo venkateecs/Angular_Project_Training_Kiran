@@ -1,9 +1,10 @@
 ﻿/// <reference path="../bower_components/angular/angular.min.js" />
 (
 
-  function () {
+function () {
 
-      angular.module("blog", []);
-  }
+    angular.module("lookup", []);
+
+}
     
 )();

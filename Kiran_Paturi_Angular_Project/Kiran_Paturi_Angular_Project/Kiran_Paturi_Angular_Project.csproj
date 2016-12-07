@@ -131,17 +131,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\blog\blog.html" />
-    <Content Include="app\blog\blog.js" />
-    <Content Include="app\blog\blogCtrl.js" />
+    <Content Include="app\components\components.js" />
+    <Content Include="app\components\componentsInitCap.js" />
+    <Content Include="app\components\componentsPhoneFormatter.js" />
+    <Content Include="app\Products\product.html" />
+    <Content Include="app\Products\product.js" />
+    <Content Include="app\Products\productCtrl.js" />
     <Content Include="app\header\Header.html" />
     <Content Include="app\header\header.js" />
     <Content Include="app\header\headerctrl.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\login\login.html" />
+    <Content Include="app\login\login.js" />
+    <Content Include="app\login\loginCtrl.js" />
+    <Content Include="app\lookup\lookup.js" />
+    <Content Include="app\lookup\lookupSvc.js" />
+    <Content Include="app\Products\productSvc.js" />
     <Content Include="app\register\register.html" />
     <Content Include="app\register\register.js" />
     <Content Include="app\register\registerCtrl.js" />
+    <Content Include="app\register\registerSvc.js" />
+    <Content Include="app\users\user.html" />
+    <Content Include="app\users\user.js" />
+    <Content Include="app\users\userCtrl.js" />
+    <Content Include="app\users\userSvc.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -198,6 +211,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="app\api\users.json" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\jquery-1.7.1.js" />
