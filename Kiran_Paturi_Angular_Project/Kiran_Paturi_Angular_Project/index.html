@@ -23,7 +23,11 @@
 <body>
 
     <div class="container">
-        <div ng-include="'app/header/Header.html'"></div>          
+      <!--<div ng-include="'app/header/Header.html'"></div>-->
+      <!--<div class="nb-Header"></div>--> <!--Directives by using classes-->
+      <!--<div nb-Header></div>--> <!--Directives By using Attribute-->
+      <nb-Header></nb-Header> <!--Directives As an Element-->                  
+
         <div ui-view></div>                      
     </div>
 
@@ -39,6 +43,7 @@
     <!--lookup-->
     <script src="app/lookup/lookup.js"></script>
      <script src="app/lookup/lookupSvc.js"></script>
+    <script src="app/lookup/lookupFac.js"></script>
 
     <script src="app/login/login.js"></script>
     <script src="app/login/loginCtrl.js"></script>
@@ -51,6 +56,7 @@
     <script src="app/components/components.js"></script>
     <script src="app/components/componentsInitCap.js"></script>
     <script src="app/components/componentsPhoneFormatter.js"></script>
+    <script src="app/components/componentsDirectives.js"></script>
 
     <script src="app/app.js"></script>
 

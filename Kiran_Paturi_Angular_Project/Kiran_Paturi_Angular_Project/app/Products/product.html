@@ -1,14 +1,32 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <div ng-controller="productCtrl">
-        <h1>Product</h1>
+﻿<div class="form-horizontal">
+    <fieldset>
+        <legend>Search</legend>
+       
+        <div class="form-group" >
+            <label class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-3">
+                <input type="text" class="form-control"  placeholder="Search" 
+                ng-model="searchProduct"
+                 >
+                
 
-        {{message}}
-    </div>
-
-</body>
-</html>
+            </div>
+            <div class="col-lg-3">
+                <button class="btn btn-warning" ng-click="search()">Search</button>
+                </div>
+        </div>
+    </fieldset>
+</div>
+ <div class="row">
+        <div class="col-xs-6" ng-repeat="product in products">
+            <div class="thumbnail">
+                <img src="{{product.thumbnailImage}}" alt="Sample Image">
+                <div class="caption">
+                    <h3 ng-bind="product.name |limitTo:50"></h3>
+                    <p ng-bind="product.shortDescription|limitTo:100" ></p>
+                        <button ng-click="addProductToCart(product)" class="btn btn-primary">Add To Cart</button>
+                        <button class="btn btn-warning">Remove From Cart</button>
+                </div>
+            </div>
+        </div>
+</div>

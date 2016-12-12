@@ -132,8 +132,10 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\components\components.js" />
+    <Content Include="app\components\componentsDirectives.js" />
     <Content Include="app\components\componentsInitCap.js" />
     <Content Include="app\components\componentsPhoneFormatter.js" />
+    <Content Include="app\lookup\lookupFac.js" />
     <Content Include="app\Products\product.html" />
     <Content Include="app\Products\product.js" />
     <Content Include="app\Products\productCtrl.js" />
