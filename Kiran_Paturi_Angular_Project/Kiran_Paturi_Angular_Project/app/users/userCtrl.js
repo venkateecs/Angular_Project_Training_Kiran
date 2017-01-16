@@ -2,7 +2,7 @@
     function () {
 
         function userCtrl($scope, userSvc) {
-            $scope.userCount = 10;
+            $scope.userCount = 4;
             userSvc.getUsers()
                 .then(function (response) {
                     $scope.users = response.data.users;
@@ -13,6 +13,13 @@
 
             $scope.showMore = function () {
                 $scope.userCount += 10;
+            };
+            $scope.editUser = function (user) {
+                $scope.title = "Edit " + user.name;
+                $scope.userEdit = user;
+            };
+            $scope.save = function () {
+                console.log($scope.userEdit);
             };
         }
         angular.module("user")

@@ -2,18 +2,50 @@
 (
    function () {
        /*Module Creation*/
-       angular.module("BlogFace", ["header", "ui.router", "product", "register", "login", "lookup", 'ngTouch', 'ui.grid', "components", "user"]);
+       angular.module("BlogFace", ["header", "ui.router", "product", "register", "login", "lookup", 'ngTouch', 'ui.grid', "components", "user", "pascalprecht.translate"]);
 
        /*Module Consumption*/
 
+
        angular.module("BlogFace")
-       .config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+       .provider("version", [function () {
+           var version = "1.0.0";
+           this.setVersion = function (data) {
+               version = data;
+           };
+           this.$get = function () {
+               return version;
+           }
+       }])
+
+       angular.module("BlogFace")
+       .config(["$stateProvider", "$urlRouterProvider", "$translateProvider", "versionProvider", function ($stateProvider, $urlRouterProvider, $translateProvider, versionProvider) {
            /*
             blog view integration
             1.Creating the state object.
             2.registering the state object.
             3.invoking the state
            */
+
+           console.log("Old Value==>"+versionProvider.$get());
+           //console.log(versionProvider.setVersion("2.2.5"));
+           console.log("New Value ===>"+versionProvider.$get());
+
+           $translateProvider.translations("en", {
+               "Home": "HOME",
+               "Product": "PRODUCT",
+               "Register": "REGISTER",
+               "Login": "LOGIN",
+               "Users": "USERS"
+           });
+           $translateProvider.translations("de", {
+               "Home": "Zuhause",
+               "Product": "PRODUKT",
+               "Register": "Neu registrieren",
+               "Login": "Anmeldung",
+               "Users": "Benutzer"               
+
+           });
 
            var productObj = {
                templateUrl: "app/products/product.html",
@@ -53,6 +85,8 @@
            $stateProvider.state("Users", userObj);
 
            console.log("Blog Face Module");
+
+           $translateProvider.preferredLanguage('en');
 
        }])
 

@@ -3,8 +3,10 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="bower_components/jquery/dist/jquery.js">
     </script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -15,7 +17,7 @@
     <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
     <script src="http://ui-grid.info/release/ui-grid.js"></script>
     <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
-
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
     
 </head>
 
@@ -25,8 +27,8 @@
     <div class="container">
       <!--<div ng-include="'app/header/Header.html'"></div>-->
       <!--<div class="nb-Header"></div>--> <!--Directives by using classes-->
-      <!--<div nb-Header></div>--> <!--Directives By using Attribute-->
-      <nb-Header></nb-Header> <!--Directives As an Element-->                  
+      <div nb-Header></div> <!--Directives By using Attribute-->
+      <!--<nb-Header></nb-Header>--> <!--Directives As an Element-->                  
 
         <div ui-view></div>                      
     </div>
@@ -60,7 +62,11 @@
 
     <script src="app/app.js"></script>
 
-   
+  <script>
+      $(document).ready(function () {
+         $('[data-toggle="popover"]').popover();
+        });
+</script>
 
 </body>
 </html>
